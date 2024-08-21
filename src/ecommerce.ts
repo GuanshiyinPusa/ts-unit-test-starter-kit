@@ -86,6 +86,13 @@ export function calculateTotal(): number {
   }, 0);
 }
 
+export function applyShippingDiscount(total: number): number {
+  if (total >= 500) {
+    return total - 10;
+  }
+  return total;
+}
+
 /**
  * Clears the shopping cart by removing all items.
  * @returns The cleared cart (empty object).
